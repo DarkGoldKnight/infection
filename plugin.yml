@@ -1,0 +1,16 @@
+---
+name: Infection
+version: dev-build-1
+main: TDroidd\Infection\Main
+api:
+- 2.0.0
+- 3.0.0
+- 3.0.0 ALPHA v7
+author: DarkGoldKnight
+description: Minigame implemented from a Call Of Duty Infected Gamemode
+
+commands:
+    infection:
+        permission: infection.command
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
