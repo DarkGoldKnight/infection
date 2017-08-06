@@ -1,7 +1,7 @@
 ---
 name: Infection
 version: dev-build-1
-main: TDroidd\Infection\Main
+main: DarkGoldKnight\Infection\Main
 api:
 - 2.0.0
 - 3.0.0
