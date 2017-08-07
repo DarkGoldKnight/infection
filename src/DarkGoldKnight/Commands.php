@@ -1,7 +1,7 @@
 <?php
 namespace DarkGoldKnight\infection;
 use pocketmine\permission\Permission;
-use pocketmine\command\Command;
+use pocketmine\command\Commands;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
