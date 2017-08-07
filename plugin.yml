@@ -1,5 +1,5 @@
 ---
-name: Infection
+name: infection
 version: dev-build-1
 main: DarkGoldKnight\infection\Main
 api:
