@@ -1,11 +1,10 @@
 ---
 name: Infection
 version: dev-build-1
-main: DarkGoldKnight\Infection\Main
+main: DarkGoldKnight\infection\Main
 api:
 - 2.0.0
 - 3.0.0
-- 3.0.0 ALPHA v7
 author: DarkGoldKnight
 description: Minigame implemented from a Call Of Duty Infected Gamemode
 
