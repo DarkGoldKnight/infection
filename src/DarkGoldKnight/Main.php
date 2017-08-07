@@ -1,5 +1,5 @@
 <?php
-namespace TDroidd\Infection;
+namespace DarkGoldKnight\infection;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 use pocketmine\Server;
@@ -7,8 +7,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
-use TDroidd\Infection\EventListener;
-use TDroidd\Infection\Tasks\WaitTask;
+use DarkGoldKnight\infection\EventListener;
+use DarkGoldKnight\infection\Tasks\TimeTask;
 use pocketmine\utils\Config;
 use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\command\Command;
@@ -65,17 +65,17 @@ class Main extends PluginBase implements Listener{
     }
     public function setInfected(Player $player){
         $this->infected[$player->getName()] = $player->getName();
-        $player->sendMessage(Main::COLOR("&eHas entrado al equipo de los Zombies!"));
+        $player->sendMessage(Main::COLOR("&eYou are now infected!"));
     }
     public function setHealthy(Player $player){
         $this->healthy_payers[$player->getName()] = $player->getName();
-        $player->sendMessage(Main::COLOR("&aHas entrado al equipo de los Humanos!"));
+        $player->sendMessage(Main::COLOR("&aYou are a survivor!"));
         }
     public function getInfected(){
         if(isset($this->infected)){
                 return $this->infected;
         }else{
-            $this->getLogger()->error(Main::COLOR("&cNo hay jugadores infectados"));
+            $this->getLogger()->error(Main::COLOR("&cYou are now infected"));
             return false;
         }
     }
@@ -83,7 +83,7 @@ class Main extends PluginBase implements Listener{
         if(isset($this->healthy_payers)){
             return $this->healthy_payers;
         }else{
-            $this->getLogger()->error(Main::COLOR("&cNo hay jugadores sanos"));
+            $this->getLogger()->error(Main::COLOR("&You are a survivor"));
             return false;
         }
     }
@@ -98,7 +98,7 @@ class Main extends PluginBase implements Listener{
     }
     public function removePlayer(Player $player){
         if (in_array($player->getName(), $this->healthy_payers)) {
-            $player->sendMessage(Main::COLOR("&eHas sido eliminado de la partida."));
+            $player->sendMessage(Main::COLOR("&eYou have now left the game."));
             unset($this->healthy_payers[$player->getName()]);
             unset($this->inGame[$player->getName()]);
         }elseif(in_array($player->getName(), $this->infected)){
