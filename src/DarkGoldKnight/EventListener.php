@@ -20,7 +20,7 @@ use pocketmine\level\Position;
 use pocketmine\tile\Sign;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
-use TDroidd\Infection\Main;
+use DarkGoldKnight\infection\Main;
 class EventListener implements Listener{
     private $plugin;
     public function __construct(Main $plugin){
