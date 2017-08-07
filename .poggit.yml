@@ -3,5 +3,5 @@ branches:
 - master
 projects:
   infection:
-    path: ""
+    path: "DarkGoldKnight/infection/.poggit.yml"
 ...
